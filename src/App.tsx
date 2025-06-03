@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AppLayout from "./components/layout/AppLayout";
 import Home from "./pages/Home";
 import SimplePendulum from "./pages/experiments/SimplePendulum";
+import StudentDashboard from "./pages/StudentDashboard";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -20,6 +21,7 @@ const App = () => (
         <Routes>
           <Route element={<AppLayout />}>
             <Route path="/" element={<Home />} />
+            <Route path="/student-dashboard" element={<StudentDashboard />} />
             <Route path="/experiment/simple-pendulum" element={<SimplePendulum />} />
           </Route>
           <Route path="*" element={<NotFound />} />

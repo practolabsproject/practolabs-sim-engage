@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
@@ -10,7 +9,9 @@ import {
   BookOpen,
   ChevronDown,
   ChevronRight,
-  Laptop
+  Laptop,
+  GraduationCap,
+  BarChart
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
@@ -72,6 +73,18 @@ const Sidebar = ({ isOpen }: SidebarProps) => {
       </div>
       <div className="flex flex-1 flex-col gap-4 p-4 pt-6">
         <div className="flex flex-col gap-1">
+          <h3 className="text-sm font-medium px-3 mb-2">Student Portal</h3>
+          <Button variant="ghost" className="w-full justify-start font-normal" asChild>
+            <Link to="/student-dashboard">
+              <GraduationCap className="h-4 w-4 mr-2" />
+              Dashboard
+            </Link>
+          </Button>
+          <Button variant="ghost" className="w-full justify-start font-normal">
+            <BarChart className="h-4 w-4 mr-2" />
+            Progress Tracking
+          </Button>
+          <Separator className="my-2" />
           <h3 className="text-sm font-medium px-3 mb-2">Experiment Categories</h3>
           <Separator className="my-1" />
           <Category

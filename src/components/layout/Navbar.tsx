@@ -9,7 +9,8 @@ import {
   User, 
   Menu, 
   Search,
-  FlaskConical
+  FlaskConical,
+  GraduationCap
 } from "lucide-react";
 
 const Navbar = ({ toggleSidebar }: { toggleSidebar: () => void }) => {
@@ -38,6 +39,10 @@ const Navbar = ({ toggleSidebar }: { toggleSidebar: () => void }) => {
           <Link to="/" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
             <Beaker className="h-4 w-4" />
             <span>Experiments</span>
+          </Link>
+          <Link to="/student-dashboard" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
+            <GraduationCap className="h-4 w-4" />
+            <span>Dashboard</span>
           </Link>
           <Link to="/library" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
             <BookOpen className="h-4 w-4" />
