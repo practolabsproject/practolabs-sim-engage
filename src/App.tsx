@@ -14,6 +14,10 @@ import DiodeCharacteristics from "./pages/experiments/DiodeCharacteristics";
 import CircuitAnalysis from "./pages/experiments/CircuitAnalysis";
 import Titration from "./pages/experiments/Titration";
 import StudentDashboard from "./pages/StudentDashboard";
+import Library from "./pages/Library";
+import Analytics from "./pages/Analytics";
+import ProgressTracking from "./pages/ProgressTracking";
+import HelpSupport from "./pages/HelpSupport";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,6 +32,10 @@ const App = () => (
           <Route element={<AppLayout />}>
             <Route path="/" element={<Home />} />
             <Route path="/student-dashboard" element={<StudentDashboard />} />
+            <Route path="/library" element={<Library />} />
+            <Route path="/analytics" element={<Analytics />} />
+            <Route path="/progress-tracking" element={<ProgressTracking />} />
+            <Route path="/help-support" element={<HelpSupport />} />
             <Route path="/experiment/simple-pendulum" element={<SimplePendulum />} />
             <Route path="/experiment/energy-gap" element={<EnergyGap />} />
             <Route path="/experiment/free-fall" element={<FreeFall />} />

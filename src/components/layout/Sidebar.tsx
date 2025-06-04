@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
@@ -80,9 +81,11 @@ const Sidebar = ({ isOpen }: SidebarProps) => {
               Dashboard
             </Link>
           </Button>
-          <Button variant="ghost" className="w-full justify-start font-normal">
-            <BarChart className="h-4 w-4 mr-2" />
-            Progress Tracking
+          <Button variant="ghost" className="w-full justify-start font-normal" asChild>
+            <Link to="/progress-tracking">
+              <BarChart className="h-4 w-4 mr-2" />
+              Progress Tracking
+            </Link>
           </Button>
           <Separator className="my-2" />
           <h3 className="text-sm font-medium px-3 mb-2">Experiment Categories</h3>
@@ -178,13 +181,17 @@ const Sidebar = ({ isOpen }: SidebarProps) => {
         <Separator className="my-2" />
         <div className="flex flex-col gap-1">
           <h3 className="text-sm font-medium px-3 mb-2">Resources</h3>
-          <Button variant="ghost" className="w-full justify-start font-normal">
-            <BookOpen className="h-4 w-4 mr-2" />
-            Study Materials
+          <Button variant="ghost" className="w-full justify-start font-normal" asChild>
+            <Link to="/library">
+              <BookOpen className="h-4 w-4 mr-2" />
+              Study Materials
+            </Link>
           </Button>
-          <Button variant="ghost" className="w-full justify-start font-normal">
-            <Pill className="h-4 w-4 mr-2" />
-            Help & Support
+          <Button variant="ghost" className="w-full justify-start font-normal" asChild>
+            <Link to="/help-support">
+              <Pill className="h-4 w-4 mr-2" />
+              Help & Support
+            </Link>
           </Button>
         </div>
       </div>
